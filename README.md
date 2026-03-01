@@ -200,6 +200,34 @@ Dark mode is supported via `prefers-color-scheme: dark`.
 2. **Copy tokens**: Copy the `:root` and `@theme` sections from `globals.css`
 3. **Ensure Tailwind**: Your project needs Tailwind CSS v4 with the same theme variables
 
+## Linting
+
+### ESLint
+
+Run ESLint to check for code quality and Next.js best practices:
+
+```bash
+npm run lint
+```
+
+### Prettier
+
+Format all files with Prettier:
+
+```bash
+npm run format
+```
+
+Check formatting without modifying files:
+
+```bash
+npm run format:check
+```
+
+### Format on Save
+
+With the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) installed, format-on-save is enabled for this workspace via `.vscode/settings.json`.
+
 ## Scripts
 
 - `npm run dev` — Start development server
@@ -208,6 +236,8 @@ Dark mode is supported via `prefers-color-scheme: dark`.
 - `npm run build` — Build for production
 - `npm run start` — Start production server
 - `npm run lint` — Run ESLint
+- `npm run format` — Format code with Prettier
+- `npm run format:check` — Check Prettier formatting
 
 ## License
 
