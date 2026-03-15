@@ -10,6 +10,7 @@ const meta: Meta<typeof Checkbox> = {
     error: { control: "text" },
     disabled: { control: "boolean" },
     checked: { control: "boolean" },
+    required: { control: "boolean" },
     variant: { control: "select", options: ["default", "supporting", "inline"] },
     size: { control: "select", options: ["sm", "md", "lg"] },
     color: { control: "select", options: ["primary", "secondary", "tertiary", "warning", "error"] },
@@ -81,6 +82,13 @@ export const Partial: Story = {
       <Checkbox label="Selected" defaultChecked />
     </div>
   ),
+};
+
+export const Required: Story = {
+  args: {
+    label: "I agree to the terms (required)",
+    required: true,
+  },
 };
 
 export const WithError: Story = {

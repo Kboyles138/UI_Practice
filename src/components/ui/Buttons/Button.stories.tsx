@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { FiPlus, FiTrash2, FiDownload } from "react-icons/fi";
 import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -16,6 +17,12 @@ const meta: Meta<typeof Button> = {
     },
     fullWidth: { control: "boolean" },
     disabled: { control: "boolean" },
+    icon: { control: false },
+    iconPosition: {
+      control: "select",
+      options: ["left", "right"],
+    },
+    "aria-label": { control: "text", description: "Required for icon-only buttons" },
   },
 };
 
@@ -83,4 +90,37 @@ export const FullWidth: Story = {
     children: "Full Width",
     fullWidth: true,
   },
+};
+
+export const WithIconLeft: Story = {
+  args: {
+    children: "Add item",
+    icon: FiPlus,
+    iconPosition: "left",
+  },
+};
+
+export const WithIconRight: Story = {
+  args: {
+    children: "Download",
+    icon: FiDownload,
+    iconPosition: "right",
+  },
+};
+
+export const IconOnly: Story = {
+  args: {
+    icon: FiTrash2,
+    "aria-label": "Delete item",
+  },
+};
+
+export const IconOnlyVariants: Story = {
+  render: () => (
+    <div className="flex flex-wrap items-center gap-4">
+      <Button icon={FiPlus} aria-label="Add" variant="primary" />
+      <Button icon={FiTrash2} aria-label="Delete" variant="danger" />
+      <Button icon={FiDownload} aria-label="Download" variant="outline" />
+    </div>
+  ),
 };

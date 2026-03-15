@@ -10,6 +10,7 @@ const meta: Meta<typeof RadioButton> = {
     label: { control: "text" },
     error: { control: "text" },
     disabled: { control: "boolean" },
+    required: { control: "boolean" },
     size: { control: "select", options: ["sm", "md", "lg"] },
     color: { control: "select", options: ["primary", "secondary", "tertiary", "warning", "error"] },
     orientation: { control: "select", options: ["stacked", "horizontal"] },
@@ -116,6 +117,15 @@ export const ColorVariants: Story = {
       />
     </div>
   ),
+};
+
+export const Required: Story = {
+  args: {
+    name: "size-required",
+    label: "Select size (required)",
+    options: sizeOptions,
+    required: true,
+  },
 };
 
 export const WithError: Story = {
