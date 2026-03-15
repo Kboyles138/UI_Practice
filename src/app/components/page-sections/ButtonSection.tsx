@@ -114,18 +114,6 @@ export function ButtonSection() {
               <Button variant="primary" fullWidth>
                 Full Width
               </Button>
-              <Button variant="secondary" fullWidth>
-                Full Width
-              </Button>
-              <Button variant="outline" fullWidth>
-                Full Width
-              </Button>
-              <Button variant="ghost" fullWidth>
-                Full Width
-              </Button>
-              <Button variant="danger" fullWidth>
-                Full Width
-              </Button>
             </div>
           </div>
 
@@ -137,18 +125,6 @@ export function ButtonSection() {
                 Disabled
               </Button>
               <Button icon={FaPlus} variant="primary" fullWidth>
-                Full Width
-              </Button>
-              <Button icon={FaPlus} variant="secondary" fullWidth>
-                Full Width
-              </Button>
-              <Button icon={FaPlus} variant="outline" fullWidth>
-                Full Width
-              </Button>
-              <Button icon={FaPlus} variant="ghost" fullWidth>
-                Full Width
-              </Button>
-              <Button icon={FaPlus} variant="danger" fullWidth>
                 Full Width
               </Button>
             </div>

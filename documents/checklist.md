@@ -28,20 +28,21 @@
 
 ## Inputs
 
-- [ ] Text Field
-- [ ] Text Area
-- [ ] Number Input
-- [ ] Password Input
-- [ ] Search Input
-- [ ] Input with Icon
+- [x] Text Field
+- [ ] Text Area (Plain)
+- [ ] Text Area (Fancy)
+- [x] Number Input
+- [x] Password Input
+- [x] Search Input
+- [x] Input with Icon
 - [ ] Input Group
 
 ---
 
 ## Selection Controls
 
-- [ ] Checkbox
-- [ ] Radio Button
+- [x] Checkbox
+- [x] Radio Button
 - [ ] Toggle / Switch
 - [ ] Select / Dropdown
 - [ ] Multi-select
@@ -62,6 +63,30 @@
 - [ ] Spacer
 - [ ] Panel
 - [ ] Card
+    - [ ] Stat / Metric Card
+    - [ ] Informational Card
+    - [ ] Article Card
+    - [ ] Image Card
+    - [ ] List Card
+    - [ ] CTA Card
+    - [ ] Profile Cards
+    - [ ] Chart Cards
+
+    Card
+ ├ Header
+ │  ├ Icon / Image
+ │  └ Title
+ ├ Content
+ │  └ Description / data
+ └ Footer
+    └ Actions / metadata
+
+    <Card>
+  <CardHeader />
+  <CardContent />
+  <CardFooter />
+</Card>
+
 - [ ] Section
 
 ---

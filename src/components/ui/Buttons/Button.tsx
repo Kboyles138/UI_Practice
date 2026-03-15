@@ -10,6 +10,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
   icon?: IconType;
   iconPosition?: "left" | "right";
+  /** Required for icon-only buttons. Provides accessible name for screen readers. */
+  "aria-label"?: string;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -35,7 +37,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 const iconSizeMap: Record<ButtonSize, string> = {
   sm: "h-3 w-3",
   md: "h-4 w-4",
-  lg: "h-5 w-5",
+  lg: "h-4.5 w-4.5",
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -48,6 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       icon: Icon,
       iconPosition = "left",
+      "aria-label": ariaLabel,
       children,
       ...props
     },
@@ -59,6 +62,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         disabled={disabled}
+        aria-label={isIconOnly ? ariaLabel : undefined}
         className={[
           "inline-flex items-center justify-center font-medium transition-colors",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",

@@ -55,6 +55,9 @@ export const Danger: Story = {
   args: {
     children: "Danger",
     variant: "danger",
+    size: "lg",
+    fullWidth: false,
+    icon: undefined,
   },
 };
 
